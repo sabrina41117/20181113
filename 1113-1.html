@@ -9,6 +9,13 @@
         .highlight {
             fill: orange;
         }
+        .bar2 {
+            fill: rgb(36, 26, 133);
+        }
+
+        .highlight {
+            fill: rgb(0, 255, 200);
+        }
 </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
@@ -174,7 +181,7 @@
          .attr("stroke", "black")
          .text("Stock Price");
 
-        g2.selectAll(".bar")
+        g2.selectAll(".bar2")
          .data(data)
          .enter().append("rect")
          .attr("class", "bar")
