@@ -141,7 +141,7 @@
     var x = d3.scaleBand().range([0, width]).padding(0.4),
         y = d3.scaleLinear().range([height, 0]);
 
-    var g2 = svg.append("g")
+    var g2 = svg2.append("g")
             .attr("transform", "translate(" + 100 + "," + 100 + ")");
 
     d3.csv("xyz.csv", function(error, data) {
@@ -174,7 +174,7 @@
          .attr("stroke", "black")
          .text("Stock Price");
 
-        g2.selectAll(".bar2")
+        g2.selectAll(".bar")
          .data(data)
          .enter().append("rect")
          .attr("class", "bar")
