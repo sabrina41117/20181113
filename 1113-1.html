@@ -9,14 +9,18 @@
         .highlight {
             fill: orange;
         }
-        .bar2 {
+
+</style>
+<style>
+           .bar2 {
             fill: rgb(36, 26, 133);
         }
 
         .highlight {
             fill: rgb(0, 255, 200);
         }
-</style>
+        </style>
+
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
@@ -225,7 +229,7 @@
     //mouseout event handler function
     function onMouseOut(d, i) {
         // use the text label class to remove label on mouseout
-        d3.select(this).attr('class', 'bar');
+        d3.select(this).attr('class', 'bar2');
         d3.select(this)
           .transition()     // adds animation
           .duration(400)
