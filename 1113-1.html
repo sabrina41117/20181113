@@ -5,21 +5,20 @@
         .bar {
             fill: steelblue;
         }
-
         .highlight {
             fill: orange;
         }
-
-</style>
-<style>
+      
            .bar2 {
             fill: rgb(36, 26, 133);
         }
 
-        .highlight {
+        .highlight2 {
             fill: rgb(0, 255, 200);
         }
         </style>
+
+
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
@@ -188,7 +187,7 @@
         g2.selectAll(".bar2")
          .data(data)
          .enter().append("rect")
-         .attr("class", "bar2")
+         .attr("class", "bar")
          .on("mouseover", onMouseOver) //Add listener for the mouseover event
          .on("mouseout", onMouseOut)   //Add listener for the mouseout event
          .attr("x", function(d) { return x(d.year); })
@@ -205,7 +204,7 @@
     
     //mouseover event handler function
     function onMouseOver(d, i) {
-        d3.select(this).attr('class', 'highlight');
+        d3.select(this).attr('class', 'highlight2');
         d3.select(this)
           .transition()     // adds animation
           .duration(400)
