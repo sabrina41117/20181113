@@ -187,7 +187,7 @@
         g2.selectAll(".bar2")
          .data(data)
          .enter().append("rect")
-         .attr("class", "bar")
+         .attr("class", "bar2")
          .on("mouseover", onMouseOver) //Add listener for the mouseover event
          .on("mouseout", onMouseOut)   //Add listener for the mouseout event
          .attr("x", function(d) { return x(d.year); })
