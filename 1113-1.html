@@ -184,7 +184,7 @@
         g2.selectAll(".bar2")
          .data(data)
          .enter().append("rect")
-         .attr("class", "bar")
+         .attr("class", "bar2")
          .on("mouseover", onMouseOver) //Add listener for the mouseover event
          .on("mouseout", onMouseOut)   //Add listener for the mouseout event
          .attr("x", function(d) { return x(d.year); })
@@ -225,7 +225,7 @@
     //mouseout event handler function
     function onMouseOut(d, i) {
         // use the text label class to remove label on mouseout
-        d3.select(this).attr('class', 'bar');
+        d3.select(this).attr('class', 'bar2');
         d3.select(this)
           .transition()     // adds animation
           .duration(400)
